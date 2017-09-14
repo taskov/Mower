@@ -31,6 +31,9 @@ public class TestConfigsConstants {
 	public static final char MOWER_INITIAL_ORIENTATION = 'N';
 	public static final char[] MOWER_DIRECTIONS = {'G','A','G','A','G','A','G','A','A'};
 	
+	public static final char MOWER_WRONG_ORIENTATION_CHARACTER = 'F';
+	public static final char[] MOWER_DIRECTIONS_WRONG_CHARACTER = {'G','L'};
+	
 	//position
 	public static final int MOWER_INITIAL_X_POSITION = 1;
 	public static final int MOWER_INITIAL_Y_POSITION = 2;

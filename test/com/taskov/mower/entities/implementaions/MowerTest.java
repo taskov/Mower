@@ -27,4 +27,10 @@ public class MowerTest {
 		mower.move(surface);
 	}
 	
+	@Test  (expected = ValidationException.class)
+	public void testMowerWithConstructorWrongOrientation () throws ValidationException{
+		TestMockups testMockups = new TestMockups();
+		testMockups.mockMowerWithWrongOrientationCharacter();
+	}
+	
 }

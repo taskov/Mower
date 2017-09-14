@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import com.taskov.mower.entities.ifc.MowerIfc;
 import com.taskov.mower.exceptions.ValidationException;
+import com.taskov.mower.validators.MowerValidator;
 import com.taskov.mower.validators.SurfaceValidator;
 
 /*
@@ -17,6 +18,8 @@ import com.taskov.mower.validators.SurfaceValidator;
 public class Mower implements MowerIfc{
 
 	public Mower(Position mowerPosition, char mowerOrientation, char[] directions) throws ValidationException{
+		MowerValidator.validateOrientation(mowerOrientation);
+		MowerValidator.validateDirections(directions);
 		this.mowerPosition = mowerPosition;
 		this.mowerOrientation = mowerOrientation;
 		this.directions = directions;

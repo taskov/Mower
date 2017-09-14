@@ -78,5 +78,17 @@ public class TestMockups {
 		return mower;
 	}
 	
+	public Mower mockMowerWithWrongOrientationCharacter() throws ValidationException{
+		Position position = new Position(TestConfigsConstants.MOWER_INITIAL_X_POSITION, TestConfigsConstants.MOWER_INITIAL_Y_POSITION);
+		Mower mower = new Mower(position, TestConfigsConstants.MOWER_WRONG_ORIENTATION_CHARACTER, TestConfigsConstants.MOWER_DIRECTIONS);
+		return mower;
+	}
+	
+	public Mower mockMowerWithWrongDirectionCharacter() throws ValidationException{
+		Position position = new Position(TestConfigsConstants.MOWER_INITIAL_X_POSITION, TestConfigsConstants.MOWER_INITIAL_Y_POSITION);
+		Mower mower = new Mower(position, TestConfigsConstants.MOWER_INITIAL_ORIENTATION, TestConfigsConstants.MOWER_DIRECTIONS_WRONG_CHARACTER);
+		return mower;
+	}
+	
 
 }
